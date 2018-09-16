@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="View.CadastroProdutoControllerView">
+   <children>
+      <Label fx:id="labelprodutos" layoutX="242.0" layoutY="42.0" text="Produtos">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoCadProdutos" layoutX="235.0" layoutY="123.0" mnemonicParsing="false" text="Cadastrar Produtos" />
+      <Button fx:id="botaoAltProdutos" layoutX="243.0" layoutY="200.0" mnemonicParsing="false" text="Alterar Produtos" />
+      <Button fx:id="botaoRemProdutos" layoutX="237.0" layoutY="283.0" mnemonicParsing="false" text="Remover Produtos" />
+   </children>
+</AnchorPane>

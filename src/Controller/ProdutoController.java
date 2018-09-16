@@ -23,10 +23,13 @@ public class ProdutoController {
     public static void cadastrarProduto (){
         
     }
-    public static void alterarProduto (){
+    public static void alterarProduto (Double valor, String f){
         
     }
-    public static void removerProduto (){
+    public static void removerProduto (String cod){
     
+    }
+    public static boolean produtoExiste(String cod){
+        return true;
     }
 }
