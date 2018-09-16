@@ -38,15 +38,15 @@ public class TelaClienteControllerView implements Initializable {
     }
     
     public void chamaCadastroCliente(){
-        Lanchonete.trocaTela("cadastroCliente");
+        Lanchonete.trocaTela("telaCadastroCliente");
     }
     
     public void chamaAlteraCliente(){
-        Lanchonete.trocaTela("AlterarCliente");
+        Lanchonete.trocaTela("telaAlteracaoCliente");
     }
     
     public void chamaRemoveCliente(){
-        Lanchonete.trocaTela("RemoverCliente");
+        Lanchonete.trocaTela("telaRemocaoCliente");
     }
     
 }

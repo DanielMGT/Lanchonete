@@ -21,11 +21,16 @@ public class ClienteController {
     public static void cadastrarCliente (ClienteModel cliente){
         
     }
-    public static void alterarDados (){
+    public static void alterarDados (String endereco, String telefone){
         
     }
-    public static void removerCliente (){
+   
+    public static void removerCliente (String nome){
         
+    }
+    
+    public static boolean clienteExiste(String nome){
+        return true;
     }
     
 }

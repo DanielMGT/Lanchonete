@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="View.TelaAlteracaoClienteControllerView">
+   <children>
+      <Label fx:id="lbTitulo" layoutX="188.0" layoutY="35.0" text="Alteração de cliente">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTelefone" layoutX="78.0" layoutY="180.0" text="Telefone: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbEndereco" layoutX="79.0" layoutY="223.0" text="Endereço">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTelefone" layoutX="151.0" layoutY="178.0" prefHeight="25.0" prefWidth="181.0" promptText="Digite o novo telefone" />
+      <TextField fx:id="tfEndereco" layoutX="151.0" layoutY="221.0" prefHeight="25.0" prefWidth="239.0" promptText="Digite o novo endereço" />
+      <Button fx:id="btAlterar" layoutX="492.0" layoutY="337.0" mnemonicParsing="false" onAction="#alterarCliente" text="Alterar" />
+      <Button fx:id="btCancelar" layoutX="412.0" layoutY="337.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      <Label fx:id="lbNome" layoutX="86.0" layoutY="141.0" text="Nome: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNome" layoutX="151.0" layoutY="139.0" prefHeight="25.0" prefWidth="291.0" promptText="Digite o nome do cliente a ser alterado" />
+   </children>
+</AnchorPane>
