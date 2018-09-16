@@ -64,7 +64,10 @@ public class TelaAlteracaoClienteControllerView implements Initializable {
     public void alterarCliente(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
         if(ClienteController.clienteExiste(tfNome.getText())){
-            ClienteController.alterarDados(tfEndereco.getText(), tfTelefone.getText());
+            cliente.setNome(tfNome.getText());
+            cliente.setEnd(tfEndereco.getText());
+            cliente.setTel(tfTelefone.getText());
+            ClienteController.alterarDados(cliente);
             dialogoInfo.setTitle("AVISO");
             dialogoInfo.setHeaderText("Cliente alterado com sucesso!");
             dialogoInfo.showAndWait();

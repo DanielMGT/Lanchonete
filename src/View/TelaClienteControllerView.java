@@ -21,16 +21,16 @@ public class TelaClienteControllerView implements Initializable {
 
     
     @FXML
-    private Label labelCliente;
+    private Button btAltCliente;
 
     @FXML
-    private Button botaoCadCliente;
+    private Label lbCliente;
 
     @FXML
-    private Button botaoAltCliente;
+    private Button btCadCliente;
 
     @FXML
-    private Button botaoRemCliente;
+    private Button btRemCliente;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

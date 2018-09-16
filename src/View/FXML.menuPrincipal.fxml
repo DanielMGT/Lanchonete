@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.menuPrincipalControllerView">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.menuPrincipalControllerView">
    <children>
-      <Label fx:id="labelmenuPrincipal" layoutX="209.0" layoutY="29.0" text="MENU PRINCIPAL">
+      <Label fx:id="lbmenuPrincipal" layoutX="209.0" layoutY="29.0" text="MENU PRINCIPAL">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="butaoPedido" layoutX="255.0" layoutY="110.0" mnemonicParsing="false" onAction="#chamaPedido" prefHeight="26.0" prefWidth="92.0" text="Fazer pedido" />
-      <Button fx:id="butaoCliente" layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#chamaCliente" text="Cadastrar cliente" />
-      <Button fx:id="butaoProduto" layoutX="244.0" layoutY="236.0" mnemonicParsing="false" onAction="#chamaProduto" text="Cadastrar produto" />
+      <Button fx:id="btPedido" layoutX="255.0" layoutY="110.0" mnemonicParsing="false" onAction="#chamaPedido" prefHeight="26.0" prefWidth="92.0" text="Fazer pedido" />
+      <Button fx:id="btCliente" layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#chamaCliente" text="Cadastrar cliente" />
+      <Button fx:id="btProduto" layoutX="244.0" layoutY="236.0" mnemonicParsing="false" onAction="#chamaProduto" text="Cadastrar produto" />
    </children>
 </AnchorPane>

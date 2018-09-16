@@ -12,25 +12,50 @@ import java.util.ArrayList;
  * @author danie
  */
 public class ClienteController {
-    public static ArrayList <ClienteModel> restaurarCliente (){
-        ArrayList <ClienteModel> cl = new ArrayList();
-        ClienteDAOArq dao = new ClienteDAOArq();
-        cl = dao.recuperar();
-        return cl;
-    }
+    
+    static ClienteDAOArq dao = new ClienteDAOArq();
+    static ArrayList<ClienteModel> clientes;
+    
     public static void cadastrarCliente (ClienteModel cliente){
-        
+        clientes.add(cliente);
     }
-    public static void alterarDados (String endereco, String telefone){
-        
+    public static void alterarDados (ClienteModel cliente){
+        clientes = dao.recuperar();
+        ClienteModel aux;
+        int i = 0;
+        while(true){
+            aux = clientes.get(i);
+            if(aux.getNome().equals(cliente.getNome())){
+                clientes.set(i, cliente);
+                return;
+            }
+            i++;
+        }
     }
    
     public static void removerCliente (String nome){
-        
+        clientes = dao.recuperar();
+        ClienteModel aux;
+        int i = 0;
+        while(true){
+           aux = clientes.get(i);
+           if(aux.getNome() == nome){
+               clientes.remove(i);
+           }
+        }
     }
     
     public static boolean clienteExiste(String nome){
-        return true;
+        clientes = dao.recuperar();
+        ClienteModel aux;
+        int i;
+        for(i = 0; i < clientes.size(); i++){
+            aux = clientes.get(i);
+            if(aux.getNome() == nome){
+                return true;
+            }
+        }
+        return false;
     }
     
 }

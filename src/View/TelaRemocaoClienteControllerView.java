@@ -45,7 +45,7 @@ public class TelaRemocaoClienteControllerView implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
+    
     public void removerCliente(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
         

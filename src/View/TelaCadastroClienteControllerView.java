@@ -54,7 +54,7 @@ public class TelaCadastroClienteControllerView implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
+    
     public void cadastrarCliente(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
         
@@ -80,7 +80,7 @@ public class TelaCadastroClienteControllerView implements Initializable {
         tfTelefone.clear();
         tfEndereco.clear();
         
-        Lanchonete.trocaTela("telaProduto");
+        Lanchonete.trocaTela("telaCliente");
     }
     
     public void cancelar(){
@@ -88,6 +88,6 @@ public class TelaCadastroClienteControllerView implements Initializable {
         tfTelefone.clear();
         tfEndereco.clear();
         
-        Lanchonete.trocaTela("telaProduto");
+        Lanchonete.trocaTela("telaCliente");
     }
    }

@@ -22,16 +22,16 @@ public class menuPrincipalControllerView implements Initializable {
     
   
     @FXML
-    private Label labelmenuPrincipal;
+    private Label lbmenuPrincipal;
 
     @FXML
-    private Button butaoPedido;
+    private Button btPedido;
 
     @FXML
-    private Button butaoCliente;
+    private Button btCliente;
 
     @FXML
-    private Button butaoProduto;
+    private Button btProduto;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
