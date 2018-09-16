@@ -29,6 +29,9 @@ public class Lanchonete extends Application implements Initializable {
     private static Scene telaCadastroCliente;
     private static Scene telaAlteracaoCliente;
     private static Scene telaRemocaoCliente;
+    private static Scene telaCadastroProduto;
+    private static Scene telaAlteracaoProduto;
+    private static Scene telaRemocaoProduto;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -48,6 +51,12 @@ public class Lanchonete extends Application implements Initializable {
         telaAlteracaoCliente = new Scene(fxmltelaAlteracaoCliente);
         Parent fxmltelaRemocaoCliente = FXMLLoader.load(getClass().getResource("FXML.TelaRemocaoCliente.fxml")); 
         telaRemocaoCliente = new Scene(fxmltelaRemocaoCliente);
+        Parent fxmltelaCadastroProduto = FXMLLoader.load(getClass().getResource("FXML.TelaCadastroProduto.fxml")); 
+        telaCadastroProduto = new Scene(fxmltelaCadastroProduto);
+        Parent fxmltelaAlteracaoProduto = FXMLLoader.load(getClass().getResource("FXML.TelaAlterarProduto.fxml")); 
+        telaAlteracaoProduto = new Scene(fxmltelaAlteracaoProduto);
+        Parent fxmltelaRemocaoProduto = FXMLLoader.load(getClass().getResource("FXML.TelaRemocaoProduto.fxml")); 
+        telaRemocaoProduto = new Scene(fxmltelaRemocaoProduto);
         
         stage.setScene(menuPrincipal);
         stage.show();
@@ -68,6 +77,12 @@ public class Lanchonete extends Application implements Initializable {
             case "telaAlteracaoCliente": stage.setScene(telaAlteracaoCliente);
                 break;
             case "telaRemocaoCliente": stage.setScene(telaRemocaoCliente);
+                break;
+            case"telaCadastroProduto": stage.setScene(telaCadastroProduto);
+                break;
+            case"telaAlteracaoProduto": stage.setScene(telaAlteracaoProduto);
+                break;
+            case"telaRemocaoProduto": stage.setScene(telaRemocaoProduto);
                 break;
         }
     }
