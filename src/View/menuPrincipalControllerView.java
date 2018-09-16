@@ -5,11 +5,13 @@
  */
 package View;
 
-import java.awt.Button;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -18,6 +20,10 @@ import javafx.fxml.Initializable;
  */
 public class menuPrincipalControllerView implements Initializable {
     
+  
+    @FXML
+    private Label labelmenuPrincipal;
+
     @FXML
     private Button butaoPedido;
 
@@ -33,9 +39,15 @@ public class menuPrincipalControllerView implements Initializable {
     } 
     
     public void chamaPedido(){
-        
+        Lanchonete.trocaTela("telaPedido");
     }
     
+    public void chamaCliente(){
+        Lanchonete.trocaTela("telaCliente");
+    }
     
+    public void chamaProduto(){
+        Lanchonete.trocaTela("telaProduto");
+    }
     
 }
