@@ -33,11 +33,11 @@ public class Lanchonete extends Application implements Initializable {
        
         Parent fxmlmenuPrincipal = FXMLLoader.load(getClass().getResource("FXML.menuPrincipal.fxml")); 
         menuPrincipal = new Scene(fxmlmenuPrincipal);
-        Parent fxmltelaPedido = FXMLLoader.load(getClass().getResource("FXML.telaPedido.fxml")); 
+        /*Parent fxmltelaPedido = FXMLLoader.load(getClass().getResource("FXML.telaPedido.fxml")); 
         telaPedido = new Scene(fxmltelaPedido);
-        Parent fxmltelaProduto = FXMLLoader.load(getClass().getResource("FXML.telaProduto.fxml")); 
-        telaProduto = new Scene(fxmltelaProduto);
-        Parent fxmltelaCliente = FXMLLoader.load(getClass().getResource("FXML.telaCliente.fxml")); 
+        Parent fxmltelaProduto = FXMLLoader.load(getClass().getResource("FXML.TelaProduto.fxml")); 
+        telaProduto = new Scene(fxmltelaProduto);*/
+        Parent fxmltelaCliente = FXMLLoader.load(getClass().getResource("FXML.TelaCliente.fxml")); 
         telaCliente = new Scene(fxmltelaCliente);
         
         stage.setScene(menuPrincipal);

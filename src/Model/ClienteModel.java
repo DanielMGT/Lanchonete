@@ -16,6 +16,7 @@ public class ClienteModel {
         this.end = end;
     }
     public ClienteModel() {
+        
     }
     public String getNome() {
         return nome;

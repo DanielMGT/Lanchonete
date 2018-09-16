@@ -18,7 +18,7 @@ public class ClienteController {
         cl = dao.recuperar();
         return cl;
     }
-    public static void cadastrarCliente (){
+    public static void cadastrarCliente (ClienteModel cliente){
         
     }
     public static void alterarDados (){
