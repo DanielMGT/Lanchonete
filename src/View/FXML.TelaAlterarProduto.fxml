@@ -15,25 +15,26 @@
          </font>
       </Label>
       <Text layoutX="121.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Text fx:id="lbAltValor" layoutX="118.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
       <Text layoutX="121.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="22.13671875" />
       <TextField fx:id="tfAltValor" layoutX="199.0" layoutY="200.0" />
-      <Text fx:id="lbAltForn" layoutX="110.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fornecedor:">
-         <font>
-            <Font size="14.0" />
-         </font></Text>
       <TextField fx:id="tfAltForn" layoutX="199.0" layoutY="249.0" prefHeight="25.0" prefWidth="260.0" />
       <Button fx:id="btCancelar" layoutX="415.0" layoutY="323.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
       <Button fx:id="btAlterar" layoutX="513.0" layoutY="323.0" mnemonicParsing="false" onAction="#alterarProd" text="Alterar" />
-      <Text fx:id="lbAltCodigo" layoutX="110.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código: ">
+      <TextField fx:id="tfAltCodigo" layoutX="199.0" layoutY="150.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label fx:id="lbAltCodigo" layoutX="93.0" layoutY="154.0" text="Código:">
          <font>
             <Font size="14.0" />
          </font>
-      </Text>
-      <TextField fx:id="tfAltCodigo" layoutX="199.0" layoutY="150.0" prefHeight="25.0" prefWidth="185.0" />
+      </Label>
+      <Label fx:id="lbAltValor" layoutX="93.0" layoutY="204.0" text="Valor: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbAltForn" layoutX="93.0" layoutY="266.0" text="Fornecedor: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

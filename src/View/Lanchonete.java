@@ -8,6 +8,7 @@ package View;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -30,16 +31,15 @@ public class Lanchonete extends Application implements Initializable {
     private static Scene telaAlteracaoCliente;
     private static Scene telaRemocaoCliente;
     private static Scene telaCadastroProduto;
-    private static Scene telaAlteracaoProduto;
+    private static Scene telaAlterarProduto;
     private static Scene telaRemocaoProduto;
 
-    @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
        
         Parent fxmlmenuPrincipal = FXMLLoader.load(getClass().getResource("FXML.menuPrincipal.fxml")); 
         menuPrincipal = new Scene(fxmlmenuPrincipal);
-        Parent fxmltelaPedido = FXMLLoader.load(getClass().getResource("FXML.telaPedido.fxml")); 
+        Parent fxmltelaPedido = FXMLLoader.load(getClass().getResource("FXML.TelaPedido.fxml")); 
         telaPedido = new Scene(fxmltelaPedido);
         Parent fxmltelaProduto = FXMLLoader.load(getClass().getResource("FXML.TelaProduto.fxml")); 
         telaProduto = new Scene(fxmltelaProduto);
@@ -53,8 +53,8 @@ public class Lanchonete extends Application implements Initializable {
         telaRemocaoCliente = new Scene(fxmltelaRemocaoCliente);
         Parent fxmltelaCadastroProduto = FXMLLoader.load(getClass().getResource("FXML.TelaCadastroProduto.fxml")); 
         telaCadastroProduto = new Scene(fxmltelaCadastroProduto);
-        Parent fxmltelaAlteracaoProduto = FXMLLoader.load(getClass().getResource("FXML.TelaAlterarProduto.fxml")); 
-        telaAlteracaoProduto = new Scene(fxmltelaAlteracaoProduto);
+        Parent fxmltelaAlterarProduto = FXMLLoader.load(getClass().getResource("FXML.TelaAlterarProduto.fxml")); 
+        telaAlterarProduto = new Scene(fxmltelaAlterarProduto);
         Parent fxmltelaRemocaoProduto = FXMLLoader.load(getClass().getResource("FXML.TelaRemocaoProduto.fxml")); 
         telaRemocaoProduto = new Scene(fxmltelaRemocaoProduto);
         
@@ -80,7 +80,7 @@ public class Lanchonete extends Application implements Initializable {
                 break;
             case"telaCadastroProduto": stage.setScene(telaCadastroProduto);
                 break;
-            case"telaAlteracaoProduto": stage.setScene(telaAlteracaoProduto);
+            case"telaAlterarProduto": stage.setScene(telaAlterarProduto);
                 break;
             case"telaRemocaoProduto": stage.setScene(telaRemocaoProduto);
                 break;

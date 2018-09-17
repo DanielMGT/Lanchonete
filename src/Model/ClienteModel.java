@@ -36,9 +36,4 @@ public class ClienteModel {
     public void setEnd(String end) {
         this.end = end;
     }
-    @Override
-    public String toString() {
-        return "Cliente{" + "nome=" + nome + ", tel=" + tel + ", end=" + end + '}';
-    }
-    
 }

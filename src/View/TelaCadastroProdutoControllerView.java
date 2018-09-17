@@ -22,7 +22,7 @@ import javafx.scene.text.Text;
 public class TelaCadastroProdutoControllerView implements Initializable{
 
     @FXML
-    private Text lbFornecedor;
+    private Label lbFornecedor;
 
     @FXML
     private TextField tfCodigo;
@@ -37,16 +37,16 @@ public class TelaCadastroProdutoControllerView implements Initializable{
     private Label lbprodutos;
 
     @FXML
-    private Text lbNome;
+    private Label lbNome;
 
     @FXML
-    private Text lbValor;
+    private Label lbValor;
 
     @FXML
     private Button btCadastrar;
 
     @FXML
-    private Text lbCodigo;
+    private Label lbCodigo;
 
     @FXML
     private Button btCancelar;
@@ -56,8 +56,8 @@ public class TelaCadastroProdutoControllerView implements Initializable{
     
     
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void initialize(URL url, ResourceBundle rb) {
+        
     }
     public void cadastrarProd (){
         String valor = tfValor.getText();

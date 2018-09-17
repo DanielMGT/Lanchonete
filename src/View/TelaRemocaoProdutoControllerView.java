@@ -32,14 +32,14 @@ public class TelaRemocaoProdutoControllerView implements Initializable{
     private Button btRemover;
 
     @FXML
-    private Text lbCodigo;
+    private Label lbCodigo;
 
     @FXML
     private Button btCancelar;
     
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void initialize(URL url, ResourceBundle rb) {
+        
     }
     public void removeProd(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);

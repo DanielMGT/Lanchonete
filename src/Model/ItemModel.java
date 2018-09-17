@@ -19,9 +19,5 @@ public class ItemModel {
     public void setQtd(int qtd) {
         this.qtd = qtd;
     }
-    @Override
-    public String toString() {
-        return "Item{" + "qtd=" + qtd + '}';
-    }
     
 }

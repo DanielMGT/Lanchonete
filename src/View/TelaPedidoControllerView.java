@@ -7,7 +7,10 @@ package View;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -16,6 +19,27 @@ import javafx.fxml.Initializable;
  */
 public class TelaPedidoControllerView implements Initializable {
 
+    @FXML
+    private Button btConta;
+
+    @FXML
+    private Button btCanPed;
+
+    @FXML
+    private Label lbPedido;
+
+    @FXML
+    private Button btCadPed;
+
+    @FXML
+    private Button btAtlPed;
+
+    @FXML
+    private Button btPaga;
+
+    @FXML
+    private Button btCancelar;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +47,19 @@ public class TelaPedidoControllerView implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+    public void chamaCadastroPedido(){
+        Lanchonete.trocaTela("telaCadastroPedido");
+    }
+    public void chamaAlteraPedido(){
+        Lanchonete.trocaTela("telaAlteraPedido");
+    }
+    public void chamaCancelaPedido(){
+        Lanchonete.trocaTela("telaCancelaPedido");
+    }
+    public void chamaContaMesa(){
+        Lanchonete.trocaTela("telaContaMesa");
+    }
+    public void chamaEfetuaPag(){
+        Lanchonete.trocaTela("telaEfetuaPag");
+    }
 }

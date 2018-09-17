@@ -10,14 +10,16 @@ package Model;
  * @author danie
  */
 public class PedidoModel {
+    private String desc;
     private int cod;
     private double preco;
     private String numNF;
 
-    public PedidoModel(int cod, double preco, String numNF) {
+    public PedidoModel(int cod, double preco, String numNF, String desc) {
         this.cod = cod;
         this.preco = preco;
         this.numNF = numNF;
+        this.desc = desc;
     }
     public int getCod() {
         return cod;
@@ -37,8 +39,4 @@ public class PedidoModel {
     public void setNumNF(String numNF) {
         this.numNF = numNF;
     }
-    @Override
-    public String toString() {
-        return "PedidoModel{" + "cod=" + cod + ", preco=" + preco + ", numNF=" + numNF + '}';
-    } 
 }

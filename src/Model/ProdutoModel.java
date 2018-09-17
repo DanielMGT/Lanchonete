@@ -43,9 +43,5 @@ public class ProdutoModel {
     public void setFornecedor(String fornecedor) {
         this.fornecedor = fornecedor;
     }
-    @Override
-    public String toString() {
-        return "Produto{" + "nome=" + nome + ", valor=" + valor + ", codigo=" + codigo + ", fornecedor=" + fornecedor + '}';
-    }
-    
+   
 }

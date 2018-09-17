@@ -7,21 +7,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="View.TelaRemocaoProdutoControllerView">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.TelaRemocaoProdutoControllerView">
    <children>
       <Label fx:id="lbRemProd" layoutX="200.0" layoutY="50.0" text="Remover Produto">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Text fx:id="lbCodigo" layoutX="113.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
       <TextField fx:id="tfCodigo" layoutX="200.0" layoutY="136.0" prefHeight="25.0" prefWidth="208.0" />
       <Button fx:id="btCancelar" layoutX="421.0" layoutY="323.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
       <Button fx:id="btRemover" layoutX="508.0" layoutY="323.0" mnemonicParsing="false" onAction="#removeProd" text="Remover" />
+      <Label layoutX="99.0" layoutY="140.0" text="Código:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

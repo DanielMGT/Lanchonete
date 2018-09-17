@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class ProdutoController {
     public static ArrayList <ProdutoModel> restaurarCliente (){
-        ArrayList <ProdutoModel> pd = new ArrayList();
+        ArrayList <ProdutoModel> pd;
         ProdutoDAOArq dao = new ProdutoDAOArq();
         pd = dao.recuperar();
         return pd;

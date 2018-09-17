@@ -26,7 +26,7 @@ public class TelaAlterarProdutoControllerView implements Initializable {
     private TextField tfAltCodigo;
      
     @FXML
-    private Text lbAltCodigo;
+    private Label lbAltCodigo;
     
      @FXML
     private TextField tfAltForn;
@@ -35,7 +35,7 @@ public class TelaAlterarProdutoControllerView implements Initializable {
     private Label lbAltprod;
 
     @FXML
-    private Text lbAltValor;
+    private Label lbAltValor;
 
     @FXML
     private Button btAlterar;
@@ -44,14 +44,14 @@ public class TelaAlterarProdutoControllerView implements Initializable {
     private TextField tfAltValor;
 
     @FXML
-    private Text lbAltForn;
+    private Label lbAltForn;
 
     @FXML
     private Button btCancelar;
        
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void initialize(URL url, ResourceBundle rb) {
+        
     }
     public void alterarProd (){
         String valor = tfAltValor.getText();

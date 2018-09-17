@@ -15,31 +15,31 @@
          </font>
       </Label>
       <Button fx:id="btCancelar" layoutX="415.0" layoutY="340.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
-      <Text fx:id="lbCodigo" layoutX="96.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
       <TextField fx:id="tfCodigo" layoutX="178.0" layoutY="188.0" prefHeight="25.0" prefWidth="197.0" />
-      <Text fx:id="lbNome" layoutX="97.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
       <TextField fx:id="tfNome" layoutX="178.0" layoutY="132.0" prefHeight="25.0" prefWidth="308.0" />
       <Text layoutX="97.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Text fx:id="lbValor" layoutX="97.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text fx:id="lbFornecedor" layoutX="97.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fornecedor: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
       <TextField fx:id="tfValor" layoutX="178.0" layoutY="243.0" prefHeight="25.0" prefWidth="197.0" />
       <TextField fx:id="tfFornecedor" layoutX="178.0" layoutY="288.0" prefHeight="25.0" prefWidth="297.0" />
       <Button fx:id="btCadastrar" layoutX="500.0" layoutY="340.0" mnemonicParsing="false" onAction="#cadastrarProd" text="Cadastrar" />
+      <Label fx:id="lbNome" layoutX="96.0" layoutY="136.0" text="Nome:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbCodigo" layoutX="96.0" layoutY="192.0" text="Código:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbValor" layoutX="96.0" layoutY="247.0" text="Valor:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbFornecedor" layoutX="82.0" layoutY="292.0" text="Fornecedor: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
