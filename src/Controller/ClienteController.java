@@ -51,7 +51,7 @@ public class ClienteController {
         int i;
         for(i = 0; i < clientes.size(); i++){
             aux = clientes.get(i);
-            if(aux.getNome() == nome){
+            if(aux.getNome().equalsIgnoreCase(nome)){
                 return true;
             }
         }

@@ -7,19 +7,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="View.TelaPedidoControllerView">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.TelaPedidoControllerView">
    <children>
       <Label fx:id="lbPedido" layoutX="252.0" layoutY="38.0" text="Pedido">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btCadPed" layoutX="237.0" layoutY="113.0" mnemonicParsing="false" text="Cadastrar Pedido" />
-      <Button fx:id="btAtlPed" layoutX="241.0" layoutY="169.0" mnemonicParsing="false" text="Alterar Pedido" />
-      <Button fx:id="btCanPed" layoutX="236.0" layoutY="227.0" mnemonicParsing="false" text="Cancelar Pedido" />
-      <Button fx:id="btPaga" layoutX="232.0" layoutY="337.0" mnemonicParsing="false" text="Efetuar Pagamento" />
-      <Button fx:id="btConta" layoutX="239.0" layoutY="283.0" mnemonicParsing="false" text="Conta da Mesa" />
-      <Button fx:id="btCancelar" layoutX="447.0" layoutY="337.0" mnemonicParsing="false" text="Cancelar" />
+      <Button fx:id="btCadPed" layoutX="237.0" layoutY="113.0" mnemonicParsing="false" onAction="#chamaCadastroPedido" text="Cadastrar Pedido" />
+      <Button fx:id="btAtlPed" layoutX="241.0" layoutY="169.0" mnemonicParsing="false" onAction="#chamaAlteraPedido" text="Alterar Pedido" />
+      <Button fx:id="btCanPed" layoutX="236.0" layoutY="227.0" mnemonicParsing="false" onAction="#chamaCancelaPedido" text="Cancelar Pedido" />
+      <Button fx:id="btPaga" layoutX="232.0" layoutY="337.0" mnemonicParsing="false" onAction="#chamaEfetuaPag" text="Efetuar Pagamento" />
+      <Button fx:id="btConta" layoutX="239.0" layoutY="283.0" mnemonicParsing="false" onAction="#chamaContaMesa" text="Conta da Mesa" />
+      <Button fx:id="btCancelar" layoutX="447.0" layoutY="337.0" mnemonicParsing="false" onAction="#chamaMenuPrincipal" text="Cancelar" />
    </children>
 </AnchorPane>

@@ -5,15 +5,16 @@
  */
 package View;
 
+import Controller.ProdutoController;
 import Model.ProdutoModel;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 
 /**
  *
@@ -54,18 +55,40 @@ public class TelaCadastroProdutoControllerView implements Initializable{
     @FXML
     private TextField tfNome;
     
-    
+    ProdutoModel prod;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
     }
-    public void cadastrarProd (){
-        String valor = tfValor.getText();
-        ProdutoModel prod = new ProdutoModel();
-        prod.setNome(tfNome.getText());
-        prod.setCodigo(tfCodigo.getText());
-        prod.setValor(Double.parseDouble(valor));
-        prod.setFornecedor(tfFornecedor.getText());
+    public void cadastrarProd (){   
+        Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+        String cd = tfCodigo.getText();
+        if (!ProdutoController.produtoExiste(Double.parseDouble(cd)) == true){
+            String valor = tfValor.getText();  
+            String code = tfCodigo.getText();
+            prod = new ProdutoModel();
+            prod.setNome(tfNome.getText());
+            prod.setCodigo(Double.parseDouble(code));
+            prod.setValor(Double.parseDouble(valor));
+            prod.setFornecedor(tfFornecedor.getText());
+            ProdutoController.cadastrarProduto(prod);
+        
+            dialogoInfo.setTitle("AVISO");
+            dialogoInfo.setHeaderText("Produto cadastrado com sucesso!");
+            dialogoInfo.showAndWait();
+            
+        }
+        else {
+            dialogoInfo.setTitle("AVISO");
+            dialogoInfo.setHeaderText("Produto já consta no cadastro!");
+            dialogoInfo.showAndWait();                  
+        }
+            tfNome.clear();
+            tfCodigo.clear();
+            tfValor.clear();
+            tfFornecedor.clear();
+            
+        Lanchonete.trocaTela("telaProduto");
     }
     public void cancelar(){
         tfNome.clear();

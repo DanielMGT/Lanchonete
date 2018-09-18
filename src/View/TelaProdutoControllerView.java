@@ -40,12 +40,12 @@ public class TelaProdutoControllerView implements Initializable {
         // TODO
     }
     public void chamaCadastroProduto(){
-        Lanchonete.trocaTela("CadastroProduto");
+        Lanchonete.trocaTela("telaCadastroProduto");
     } 
     public void chamaAlteraProduto(){
-        Lanchonete.trocaTela("AlterarProduto");
+        Lanchonete.trocaTela("telaAlterarProduto");
     }  
     public void chamaRemoveProduto(){
-        Lanchonete.trocaTela("RemocaoProduto");
+        Lanchonete.trocaTela("telaRemocaoProduto");
     } 
 }

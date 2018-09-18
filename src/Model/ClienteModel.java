@@ -1,35 +1,14 @@
 
 package Model;
 
-/**
- *
- * @author danie
- */
-public class ClienteModel {
-    private String nome;
-    private String tel;
+public class ClienteModel extends PessoaModel{
     private String end;
 
     public ClienteModel(String nome, String tel, String end) {
-        this.nome = nome;
-        this.tel = tel;
+        super(nome, tel);
         this.end = end;
     }
-    public ClienteModel() {
-        
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public String getTel() {
-        return tel;
-    }
-    public void setTel(String tel) {
-        this.tel = tel;
-    }
+
     public String getEnd() {
         return end;
     }

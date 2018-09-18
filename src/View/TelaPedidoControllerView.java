@@ -15,7 +15,7 @@ import javafx.scene.control.Label;
 /**
  * FXML Controller class
  *
- * @author Túlio
+ * @author danie
  */
 public class TelaPedidoControllerView implements Initializable {
 
@@ -61,5 +61,8 @@ public class TelaPedidoControllerView implements Initializable {
     }
     public void chamaEfetuaPag(){
         Lanchonete.trocaTela("telaEfetuaPag");
+    }
+    public void chamaMenuPrincipal(){
+        Lanchonete.trocaTela("menuPrincipal");
     }
 }

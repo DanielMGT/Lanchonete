@@ -19,7 +19,7 @@ import javafx.scene.control.Button;
 /**
  * FXML Controller class
  *
- * @author Túlio
+ * @author danie
  */
 
 public class TelaCadastroClienteControllerView implements Initializable {
@@ -58,13 +58,9 @@ public class TelaCadastroClienteControllerView implements Initializable {
     public void cadastrarCliente(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
         
-        if(!ClienteController.clienteExiste(tfNome.getText())){
-        cliente = new ClienteModel();
-        cliente.setNome(tfNome.getText());
-        cliente.setTel(tfTelefone.getText());
-        cliente.setEnd(tfEndereco.getText());
-        
-        ClienteController.cadastrarCliente(cliente);
+        if(!ClienteController.clienteExiste(tfNome.getText())){           
+            cliente = new ClienteModel(tfNome.getText(), tfTelefone.getText(),tfEndereco.getText());
+            ClienteController.cadastrarCliente(cliente);
         
         dialogoInfo.setTitle("AVISO");
         dialogoInfo.setHeaderText("Cliente cadastrado com sucesso!");

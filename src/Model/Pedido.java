@@ -9,22 +9,22 @@ package Model;
  *
  * @author danie
  */
-public class PedidoModel {
+public class Pedido {
     private String desc;
-    private int cod;
+    private double cod;
     private double preco;
     private String numNF;
 
-    public PedidoModel(int cod, double preco, String numNF, String desc) {
+    public Pedido(double cod, double preco, String numNF, String desc) {
         this.cod = cod;
         this.preco = preco;
         this.numNF = numNF;
         this.desc = desc;
     }
-    public int getCod() {
+    public double getCod() {
         return cod;
     }
-    public void setCod(int cod) {
+    public void setCod(double cod) {
         this.cod = cod;
     }
     public double getPreco() {

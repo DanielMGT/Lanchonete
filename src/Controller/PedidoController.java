@@ -6,7 +6,7 @@
 package Controller;
 
 import DAO.PedidoDAOArq;
-import Model.PedidoModel;
+import Model.Pedido;
 import java.util.ArrayList;
 
 /**
@@ -14,13 +14,10 @@ import java.util.ArrayList;
  * @author danie
  */
 public class PedidoController {
-    public ArrayList <PedidoModel> restaurarCliente (){
-        ArrayList <PedidoModel> c = new ArrayList();
+   
+        ArrayList <Pedido> c = new ArrayList();
         PedidoDAOArq dao = new PedidoDAOArq();
-        c = dao.recuperar();
-        return c;
-    }
-    
+        
     
     public void alterarPedido(){
         

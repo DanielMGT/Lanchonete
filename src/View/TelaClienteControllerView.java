@@ -15,7 +15,7 @@ import javafx.scene.control.Label;
 /**
  * FXML Controller class
  *
- * @author Túlio
+ * @author danie
  */
 public class TelaClienteControllerView implements Initializable {
 

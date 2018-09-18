@@ -31,6 +31,7 @@ public class ClienteDAOArq implements Cliente_dao {
         }
         return instance;
     }
+    @Override
     public void salvar (ClienteModel cliente){
        ClienteDAOArq dao = new ClienteDAOArq();       
         list = dao.recuperar();//recupera a lista do arquivo
@@ -46,18 +47,7 @@ public class ClienteDAOArq implements Cliente_dao {
             Logger.getLogger(ClienteDAOArq.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public void alterar(ArrayList<ClienteModel> listp ){
-        try{
-            FileOutputStream saveFile = new FileOutputStream("CadastroCliente.txt");
-            ObjectOutputStream stream = new ObjectOutputStream(saveFile);//instancia o objeto de gravação
-            stream.writeObject(listp);//salva a lista no arquivo
-            stream.close();//fecha objeto de gravação
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
-        }catch (IOException ex) {
-            Logger.getLogger(ClienteDAOArq.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+    @Override
     public ArrayList<ClienteModel> recuperar() {
         if(new File("Cadastro.txt").canRead() == true){
             try{
@@ -86,5 +76,18 @@ public class ClienteDAOArq implements Cliente_dao {
             }
         }
         return list;
+    }
+    @Override
+    public void alterar(ArrayList<ClienteModel> listp){
+        try{
+            FileOutputStream saveFile = new FileOutputStream("CadastroCliente.txt");
+            ObjectOutputStream stream = new ObjectOutputStream(saveFile);//instancia o objeto de gravação
+            stream.writeObject(listp);//salva a lista no arquivo
+            stream.close();//fecha objeto de gravação
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException ex) {
+            Logger.getLogger(ClienteDAOArq.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

@@ -43,10 +43,11 @@ public class TelaRemocaoProdutoControllerView implements Initializable{
     }
     public void removeProd(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
-        if (ProdutoController.produtoExiste(tfCodigo.getText())){
-            ProdutoController.removerProduto(tfCodigo.getText());
+        String cd = tfCodigo.getText();
+        if (ProdutoController.produtoExiste(Double.parseDouble(cd))){
+            ProdutoController.removerProduto(Double.parseDouble(cd));
             dialogoInfo.setTitle("AVISO");
-            dialogoInfo.setHeaderText("Cliente removido com sucesso!");
+            dialogoInfo.setHeaderText("Produto removido com sucesso!");
             dialogoInfo.showAndWait();
         }
         else {

@@ -33,6 +33,12 @@ public class Lanchonete extends Application implements Initializable {
     private static Scene telaCadastroProduto;
     private static Scene telaAlterarProduto;
     private static Scene telaRemocaoProduto;
+    private static Scene telaLogin;
+    private static Scene telaCadastroPedido;
+    private static Scene telaAlteraPedido;
+    private static Scene telaCancelaPedido;
+    private static Scene telaContaMesa;
+    private static Scene telaEfetuaPag;
 
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
@@ -57,13 +63,27 @@ public class Lanchonete extends Application implements Initializable {
         telaAlterarProduto = new Scene(fxmltelaAlterarProduto);
         Parent fxmltelaRemocaoProduto = FXMLLoader.load(getClass().getResource("FXML.TelaRemocaoProduto.fxml")); 
         telaRemocaoProduto = new Scene(fxmltelaRemocaoProduto);
+        Parent fxmltelaLogin = FXMLLoader.load(getClass().getResource("FXML.TelaLogin.fxml")); 
+        telaLogin = new Scene(fxmltelaLogin);
+        Parent fxmltelaCadastroPedido = FXMLLoader.load(getClass().getResource("FXML.telaCadastroPedido.fxml")); 
+        telaCadastroPedido = new Scene(fxmltelaCadastroPedido);
+        //Parent fxmltelaAlteraPedido = FXMLLoader.load(getClass().getResource("FXML.telaAlteraPedido.fxml")); 
+        //telaAlteraPedido = new Scene(fxmltelaAlteraPedido);
+        //Parent fxmltelaCancelaPedido = FXMLLoader.load(getClass().getResource("FXML.telaCancelaPedido.fxml")); 
+        //telaCancelaPedido = new Scene(fxmltelaCancelaPedido);
+        //Parent fxmltelaContaMesa = FXMLLoader.load(getClass().getResource("FXML.telaContaMesa.fxml")); 
+        //telaContaMesa = new Scene(fxmltelaContaMesa);
+        //Parent fxmltelaEfetuaPag = FXMLLoader.load(getClass().getResource("FXML.telaEfetuaPag.fxml")); 
+        //telaEfetuaPag = new Scene(fxmltelaEfetuaPag);
         
-        stage.setScene(menuPrincipal);
+        stage.setScene(telaLogin);
         stage.show();
     }
     
     public static void trocaTela(String tela){
         switch(tela){
+            case"telaLogin": stage.setScene(telaLogin);
+                break;
             case "menuPrincipal": stage.setScene(menuPrincipal);
                 break;
             case "telaPedido": stage.setScene(telaPedido);
@@ -83,6 +103,16 @@ public class Lanchonete extends Application implements Initializable {
             case"telaAlterarProduto": stage.setScene(telaAlterarProduto);
                 break;
             case"telaRemocaoProduto": stage.setScene(telaRemocaoProduto);
+                break;
+            case"telaCadastroPedido": stage.setScene(telaCadastroPedido);
+                break;
+            case"telaAlteraPedido": stage.setScene(telaAlteraPedido);
+                break;
+            case"telaCancelaPedido": stage.setScene(telaCancelaPedido);
+                break;
+            case"telaContaMesa": stage.setScene(telaContaMesa);
+                break;
+            case"telaEfetuaPag": stage.setScene(telaEfetuaPag);
                 break;
         }
     }

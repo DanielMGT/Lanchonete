@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
- * @author Túlio
+ * @author danie
  */
 public class TelaAlteracaoClienteControllerView implements Initializable {
 
@@ -63,7 +63,7 @@ public class TelaAlteracaoClienteControllerView implements Initializable {
     
     public void alterarCliente(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
-        if(ClienteController.clienteExiste(tfNome.getText())){
+        if(!ClienteController.clienteExiste(tfNome.getText())){
             cliente.setNome(tfNome.getText());
             cliente.setEnd(tfEndereco.getText());
             cliente.setTel(tfTelefone.getText());

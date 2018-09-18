@@ -55,8 +55,9 @@ public class TelaAlterarProdutoControllerView implements Initializable {
     }
     public void alterarProd (){
         String valor = tfAltValor.getText();
+        String c = tfAltCodigo.getText();
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
-        if (ProdutoController.produtoExiste(tfAltCodigo.getText())){
+        if (ProdutoController.produtoExiste(Double.parseDouble(c))){
             ProdutoController.alterarProduto(Double.parseDouble(valor), tfAltForn.getText());
             dialogoInfo.setTitle("AVISO");
             dialogoInfo.setHeaderText("Produto alterado com sucesso!");

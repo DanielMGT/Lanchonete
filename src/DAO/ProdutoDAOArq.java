@@ -32,12 +32,13 @@ public class ProdutoDAOArq implements Produto_dao {
         }
         return instance;
     }
+    @Override
     public void salvar(ProdutoModel produto){
         ProdutoDAOArq dao = new ProdutoDAOArq();
         list = dao.recuperar();
         list.add(produto);
         try {
-            FileOutputStream saveFile = new FileOutputStream("Produto.txt");
+            FileOutputStream saveFile = new FileOutputStream("Produtos.txt");
             ObjectOutputStream stream = new ObjectOutputStream(saveFile);
             stream.writeObject(list);
             stream.close();
@@ -49,8 +50,9 @@ public class ProdutoDAOArq implements Produto_dao {
             Logger.getLogger(ProdutoDAOArq.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    @Override
      public ArrayList<ProdutoModel> recuperar(){//Restaura lista
-        if(new File("Produtos.txt").canRead() == true){
+        if(new File("Produto.txt").canRead() == true){
             try{
                 FileInputStream restFile = new FileInputStream("Produtos.txt");
                 ObjectInputStream stream = new ObjectInputStream(restFile);            
@@ -78,6 +80,7 @@ public class ProdutoDAOArq implements Produto_dao {
         }
         return list;
     }
+    @Override
      public void alterar(ArrayList<ProdutoModel> listp ){
         try{
             FileOutputStream saveFile = new FileOutputStream("Produtos.txt");

@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import static Controller.ProdutoController.pd;
 import DAO.ProdutoDAOArq;
 import Model.ProdutoModel;
 import java.util.ArrayList;
@@ -14,22 +15,29 @@ import java.util.ArrayList;
  * @author danie
  */
 public class ProdutoController {
-    public static ArrayList <ProdutoModel> restaurarCliente (){
-        ArrayList <ProdutoModel> pd;
-        ProdutoDAOArq dao = new ProdutoDAOArq();
-        pd = dao.recuperar();
-        return pd;
-    }
-    public static void cadastrarProduto (){
+       static ArrayList <ProdutoModel> pd;
+       static ProdutoDAOArq dao = new ProdutoDAOArq();
         
+    public static void cadastrarProduto (ProdutoModel produto){
+        pd.add(produto);
     }
     public static void alterarProduto (Double valor, String f){
         
     }
-    public static void removerProduto (String cod){
+    public static void removerProduto (double cod){
     
     }
-    public static boolean produtoExiste(String cod){
-        return true;
+    public static boolean produtoExiste(double cod){
+        pd = dao.recuperar();
+        ProdutoModel aux;
+        int i;
+        for(i = 0; i < pd.size(); i++){
+            aux = pd.get(i);
+            if(aux.getCodigo() == cod){
+                return true;
+            }
+        }
+        return false;
+        
     }
 }

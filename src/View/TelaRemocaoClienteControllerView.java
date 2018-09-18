@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
- * @author Túlio
+ * @author danie
  */
 public class TelaRemocaoClienteControllerView implements Initializable {
 

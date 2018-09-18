@@ -19,5 +19,6 @@
       <Button fx:id="btPedido" layoutX="255.0" layoutY="110.0" mnemonicParsing="false" onAction="#chamaPedido" prefHeight="26.0" prefWidth="92.0" text="Fazer pedido" />
       <Button fx:id="btCliente" layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#chamaCliente" text="Cadastrar cliente" />
       <Button fx:id="btProduto" layoutX="244.0" layoutY="236.0" mnemonicParsing="false" onAction="#chamaProduto" text="Cadastrar produto" />
+      <Button fx:id="btVoltar" layoutX="484.0" layoutY="332.0" mnemonicParsing="false" onAction="#chamaLogin" text="Voltar" />
    </children>
 </AnchorPane>

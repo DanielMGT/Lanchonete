@@ -8,10 +8,10 @@ package Model;
 public class ProdutoModel {
     private String nome;
     private double valor;
-    private String codigo;
+    private double codigo;
     private String fornecedor;
 
-    public ProdutoModel(String nome, double valor, String codigo, String fornecedor) {
+    public ProdutoModel(String nome, double valor, double codigo, String fornecedor) {
         this.nome = nome;
         this.valor = valor;
         this.codigo = codigo;
@@ -31,10 +31,10 @@ public class ProdutoModel {
     public void setValor(double valor) {
         this.valor = valor;
     }
-    public String getCodigo() {
+    public double getCodigo() {
         return codigo;
     }
-    public void setCodigo(String codigo) {
+    public void setCodigo(double codigo) {
         this.codigo = codigo;
     }
     public String getFornecedor() {

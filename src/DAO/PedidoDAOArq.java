@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import Model.PedidoModel;
+import Model.Pedido;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  * @author danie
  */
 public class PedidoDAOArq implements Pedido_dao {
-    ArrayList <PedidoModel> list = new ArrayList();
+    ArrayList <Pedido> list = new ArrayList();
     private static PedidoDAOArq instance;
     public PedidoDAOArq(){}
     public static PedidoDAOArq getInstance(){
@@ -31,7 +31,7 @@ public class PedidoDAOArq implements Pedido_dao {
         }
         return instance;
     }
-    public void salvar (PedidoModel pedido){
+    public void salvar (Pedido pedido){
         PedidoDAOArq dao = new PedidoDAOArq();       
         list = dao.recuperar();//recupera a lista do arquivo
         list.add(pedido);
@@ -46,7 +46,7 @@ public class PedidoDAOArq implements Pedido_dao {
             Logger.getLogger(ClienteDAOArq.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public void alterar(ArrayList<PedidoModel> listp ){
+    public void alterar(ArrayList<Pedido> listp ){
         try{
             FileOutputStream saveFile = new FileOutputStream("PedidoCliente.txt");
             ObjectOutputStream stream = new ObjectOutputStream(saveFile);//instancia o objeto de gravação
@@ -58,12 +58,12 @@ public class PedidoDAOArq implements Pedido_dao {
             Logger.getLogger(ClienteDAOArq.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public ArrayList<PedidoModel> recuperar() {
+    public ArrayList<Pedido> recuperar() {
         if(new File("Pedido.txt").canRead() == true){
             try{
                 FileInputStream restFile = new FileInputStream("PedidoCliente.txt");
                 ObjectInputStream stream = new ObjectInputStream(restFile);            
-                ArrayList<PedidoModel> novo = (ArrayList) stream.readObject();
+                ArrayList<Pedido> novo = (ArrayList) stream.readObject();
                 stream.close();
                 return novo;
             }catch(FileNotFoundException e){
