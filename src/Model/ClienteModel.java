@@ -1,4 +1,4 @@
-
+            
 package Model;
 
 public class ClienteModel extends PessoaModel{
@@ -8,11 +8,11 @@ public class ClienteModel extends PessoaModel{
         super(nome, tel);
         this.end = end;
     }
-
     public String getEnd() {
         return end;
     }
     public void setEnd(String end) {
         this.end = end;
     }
+    
 }

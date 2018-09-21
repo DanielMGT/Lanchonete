@@ -62,15 +62,9 @@ public class TelaCadastroPedidoControllerView implements Initializable {
     public void cadastrarPedido(){
         String cod = tfCode.getText();
         String p = tfPreco.getText();
-        String d = tfDesc.getText();
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
-        if (ProdutoController.produtoExiste(Double.parseDouble(d))){
-            produto = new ProdutoModel();
-            produto.setNome(tfDesc.getText());
-            pedido.setCod(Double.parseDouble(cod));
-            pedido.setPreco(Double.parseDouble(p));
-            pedido.setNumNF(tfNFiscal.getText());
-            
+        if (ProdutoController.produtoExiste(Double.parseDouble(cod))){
+            produto = new ProdutoModel(Double.parseDouble(cod), tfDesc.getText(), Double.parseDouble(p));                   
             dialogoInfo.setTitle("AVISO");
             dialogoInfo.setHeaderText("Seu pedido foi registrado!");
             dialogoInfo.showAndWait();
@@ -83,7 +77,6 @@ public class TelaCadastroPedidoControllerView implements Initializable {
         tfDesc.clear();
         tfCode.clear();
         tfPreco.clear();
-        tfNFiscal.clear();
         
         Lanchonete.trocaTela("telaPedido");
     }

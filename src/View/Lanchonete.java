@@ -65,15 +65,15 @@ public class Lanchonete extends Application implements Initializable {
         telaRemocaoProduto = new Scene(fxmltelaRemocaoProduto);
         Parent fxmltelaLogin = FXMLLoader.load(getClass().getResource("FXML.TelaLogin.fxml")); 
         telaLogin = new Scene(fxmltelaLogin);
-        Parent fxmltelaCadastroPedido = FXMLLoader.load(getClass().getResource("FXML.telaCadastroPedido.fxml")); 
+        Parent fxmltelaCadastroPedido = FXMLLoader.load(getClass().getResource("FXML.TelaCadastroPedido.fxml")); 
         telaCadastroPedido = new Scene(fxmltelaCadastroPedido);
-        //Parent fxmltelaAlteraPedido = FXMLLoader.load(getClass().getResource("FXML.telaAlteraPedido.fxml")); 
-        //telaAlteraPedido = new Scene(fxmltelaAlteraPedido);
-        //Parent fxmltelaCancelaPedido = FXMLLoader.load(getClass().getResource("FXML.telaCancelaPedido.fxml")); 
+        Parent fxmltelaAlteraPedido = FXMLLoader.load(getClass().getResource("FXML.TelaAlteraPedido.fxml")); 
+        telaAlteraPedido = new Scene(fxmltelaAlteraPedido);
+        //Parent fxmltelaCancelaPedido = FXMLLoader.load(getClass().getResource("FXML.TelaCancelaPedido.fxml")); 
         //telaCancelaPedido = new Scene(fxmltelaCancelaPedido);
-        //Parent fxmltelaContaMesa = FXMLLoader.load(getClass().getResource("FXML.telaContaMesa.fxml")); 
+        //Parent fxmltelaContaMesa = FXMLLoader.load(getClass().getResource("FXML.TelaContaMesa.fxml")); 
         //telaContaMesa = new Scene(fxmltelaContaMesa);
-        //Parent fxmltelaEfetuaPag = FXMLLoader.load(getClass().getResource("FXML.telaEfetuaPag.fxml")); 
+        //Parent fxmltelaEfetuaPag = FXMLLoader.load(getClass().getResource("FXML.TelaEfetuaPag.fxml")); 
         //telaEfetuaPag = new Scene(fxmltelaEfetuaPag);
         
         stage.setScene(telaLogin);

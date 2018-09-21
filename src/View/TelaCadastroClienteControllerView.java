@@ -49,7 +49,6 @@ public class TelaCadastroClienteControllerView implements Initializable {
     private Button btCancelar;
     
     ClienteModel cliente;
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -57,7 +56,6 @@ public class TelaCadastroClienteControllerView implements Initializable {
     
     public void cadastrarCliente(){
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
-        
         if(!ClienteController.clienteExiste(tfNome.getText())){           
             cliente = new ClienteModel(tfNome.getText(), tfTelefone.getText(),tfEndereco.getText());
             ClienteController.cadastrarCliente(cliente);
@@ -85,5 +83,6 @@ public class TelaCadastroClienteControllerView implements Initializable {
         tfEndereco.clear();
         
         Lanchonete.trocaTela("telaCliente");
+        
     }
    }

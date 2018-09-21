@@ -5,8 +5,9 @@
  */
 package Controller;
 
-import DAO.PedidoDAOArq;
-import Model.Pedido;
+import static Controller.ProdutoController.pd;
+import DAO.ProdutoDAOArq;
+import Model.ProdutoModel;
 import java.util.ArrayList;
 
 /**
@@ -15,15 +16,35 @@ import java.util.ArrayList;
  */
 public class PedidoController {
    
-        ArrayList <Pedido> c = new ArrayList();
-        PedidoDAOArq dao = new PedidoDAOArq();
+        static ArrayList <ProdutoModel> c;
+        static ProdutoDAOArq dao = new ProdutoDAOArq();
         
-    
-    public void alterarPedido(){
-        
+    public static void cadastrarCliente (ProdutoModel produto){
+        c.add(produto);
+    } 
+    public static void alterarPedido(ProdutoModel produto){
+        c = dao.recuperar();
+        ProdutoModel aux;
+        int i = 0;
+        while(true){
+            aux = c.get(i);
+            if(aux.getCodigo() == produto.getCodigo()){
+                c.set(i, produto) ;
+                return;
+            }
+            i++;
+        }
     }
-    public void removerPedido(){
-        
+    public static void removerPedido(String nome){
+        c = dao.recuperar();
+        ProdutoModel aux;
+        int i = 0;
+        while(true){
+           aux = c.get(i);
+           if(aux.getDesc().equalsIgnoreCase(nome)){
+               c.remove(i);
+           }
+        }
     }
     public void efetuarPag(){
         
@@ -31,5 +52,18 @@ public class PedidoController {
     public double contaMesa(){
         
         return 1;
+    }
+    public static boolean produtoExiste(double cod){
+        c = dao.recuperar();
+        ProdutoModel aux;
+        int i;
+        for(i = 0; i < pd.size(); i++){
+            aux = pd.get(i);
+            if(aux.getCodigo() == cod){
+                return true;
+            }
+        }
+        return false;
+        
     }
 }

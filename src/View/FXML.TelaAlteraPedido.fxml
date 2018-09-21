@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.TelaAlteraPedidoControllerView">
+   <children>
+      <Label fx:id="lbAltPedido" layoutX="196.0" layoutY="42.0" text="Alterar seu Pedido">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbSeuPedido" layoutX="56.0" layoutY="122.0" text="Seu desejo:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfSeuPedido" layoutX="140.0" layoutY="119.0" prefHeight="25.0" prefWidth="304.0" promptText="Digite o novo pedido" />
+      <Label fx:id="lbAltCodigo" layoutX="56.0" layoutY="190.0" text="Código:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="262.0" />
+      <Label fx:id="lbAltPreco" layoutX="64.0" layoutY="262.0" text="Preço: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfAltCodigo" layoutX="140.0" layoutY="188.0" prefHeight="25.0" prefWidth="228.0" promptText="Digite o novo codigo " />
+      <TextField fx:id="tfAltPreco" layoutX="140.0" layoutY="260.0" promptText="Digite o novo preço" />
+      <Label fx:id="lbAltNFiscal" layoutX="38.0" layoutY="330.0" text="Nº Nota Fiscal: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfAltNFiscal" layoutX="140.0" layoutY="328.0" prefHeight="25.0" prefWidth="195.0" promptText="Digite a nova nota fiscal" />
+      <Button fx:id="btVoltar" layoutX="444.0" layoutY="328.0" mnemonicParsing="false" onAction="#cancelar" text="Voltar" />
+      <Button fx:id="btAlterar" layoutX="512.0" layoutY="328.0" mnemonicParsing="false" onAction="#alterarPed" text="Alterar" />
+   </children>
+</AnchorPane>

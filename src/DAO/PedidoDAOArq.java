@@ -76,7 +76,7 @@ public class PedidoDAOArq implements Pedido_dao {
         }
         else{
             try{
-                FileOutputStream saveFile = new FileOutputStream("CadastroCliente.txt");
+                FileOutputStream saveFile = new FileOutputStream("PedidoCliente.txt");
                 ObjectOutputStream stream = new ObjectOutputStream(saveFile);//instancia o objeto de gravação
                 stream.close();//fecha objeto de gravação
             }catch (FileNotFoundException ex) {

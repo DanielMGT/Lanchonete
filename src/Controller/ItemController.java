@@ -6,6 +6,7 @@
 package Controller;
 
 import DAO.ItemDAOArq;
+import Model.ItemModel;
 import Model.ProdutoModel;
 import java.util.ArrayList;
 
@@ -20,6 +21,9 @@ public class ItemController {
         ItemDAOArq dao = new ItemDAOArq();
         itemList = dao.recuperar();
         return itemList;
+    }
+    public void addItens(ProdutoModel item){
+        itemList.add(item);
     }
     
 }

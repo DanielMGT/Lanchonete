@@ -8,6 +8,7 @@ public class FuncionarioModel extends PessoaModel {
         super(nome, tel);
         this.matricula = matricula;
     }
+
     public String getMatricula() {
         return matricula;
     }

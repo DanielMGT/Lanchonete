@@ -6,6 +6,7 @@
 package View;
 
 import Controller.ProdutoController;
+import Model.Pedido;
 import Model.ProdutoModel;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -56,6 +57,7 @@ public class TelaCadastroProdutoControllerView implements Initializable{
     private TextField tfNome;
     
     ProdutoModel prod;
+    Pedido ped;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -66,13 +68,10 @@ public class TelaCadastroProdutoControllerView implements Initializable{
         if (!ProdutoController.produtoExiste(Double.parseDouble(cd)) == true){
             String valor = tfValor.getText();  
             String code = tfCodigo.getText();
-            prod = new ProdutoModel();
-            prod.setNome(tfNome.getText());
-            prod.setCodigo(Double.parseDouble(code));
-            prod.setValor(Double.parseDouble(valor));
+            prod = new ProdutoModel(Double.parseDouble(cd), tfNome.getText(), Double.parseDouble(valor));
             prod.setFornecedor(tfFornecedor.getText());
             ProdutoController.cadastrarProduto(prod);
-        
+            
             dialogoInfo.setTitle("AVISO");
             dialogoInfo.setHeaderText("Produto cadastrado com sucesso!");
             dialogoInfo.showAndWait();

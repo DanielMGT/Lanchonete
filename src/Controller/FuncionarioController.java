@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class FuncionarioController {
     static FuncionarioDAOArq dao = new FuncionarioDAOArq();
     static ArrayList<FuncionarioModel> func;
-    
+                       
     public static void cadastraFuncionario(FuncionarioModel funcionario){
         func.add(funcionario);
     }   

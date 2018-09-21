@@ -34,7 +34,7 @@ public class TelaClienteControllerView implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // o view pega
     }
     
     public void chamaCadastroCliente(){

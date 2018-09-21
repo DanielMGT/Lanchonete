@@ -6,6 +6,7 @@
 package View;
 
 import Controller.ProdutoController;
+import Model.ProdutoModel;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -20,7 +21,7 @@ import javafx.scene.text.Text;
  *
  * @author danie
  */
-public class TelaAlterarProdutoControllerView implements Initializable {
+public class TelaAlteraProdutoControllerView implements Initializable {
 
      @FXML
     private TextField tfAltCodigo;
@@ -49,6 +50,7 @@ public class TelaAlterarProdutoControllerView implements Initializable {
     @FXML
     private Button btCancelar;
        
+    ProdutoModel produto;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -58,7 +60,10 @@ public class TelaAlterarProdutoControllerView implements Initializable {
         String c = tfAltCodigo.getText();
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
         if (ProdutoController.produtoExiste(Double.parseDouble(c))){
-            ProdutoController.alterarProduto(Double.parseDouble(valor), tfAltForn.getText());
+            produto.setCodigo(Double.parseDouble(c));
+            produto.setFornecedor(tfAltForn.getText());
+            produto.setPreco(Double.parseDouble(valor));
+            ProdutoController.alterarProduto(produto);
             dialogoInfo.setTitle("AVISO");
             dialogoInfo.setHeaderText("Produto alterado com sucesso!");
             dialogoInfo.showAndWait();           

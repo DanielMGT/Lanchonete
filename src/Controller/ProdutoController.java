@@ -21,11 +21,29 @@ public class ProdutoController {
     public static void cadastrarProduto (ProdutoModel produto){
         pd.add(produto);
     }
-    public static void alterarProduto (Double valor, String f){
-        
+    public static void alterarProduto (ProdutoModel produto){
+        pd = dao.recuperar();
+        ProdutoModel aux;
+        int i = 0;
+        while(true){
+            aux = pd.get(i);
+            if(aux.getDesc().equals(produto.getDesc())){
+                pd.set(i, produto);
+                return;
+            }
+            i++;
+        }
     }
     public static void removerProduto (double cod){
-    
+        pd = dao.recuperar();
+        ProdutoModel aux;
+        int i = 0;
+        while(true){
+           aux = pd.get(i);
+           if(aux.getCodigo() == cod){
+               pd.remove(i);
+           }
+        }
     }
     public static boolean produtoExiste(double cod){
         pd = dao.recuperar();
