@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package Controller;
-import DAO.ClienteDAOArq;
+import DAO.Cliente_dao;
+import Factory.ClienteFactory;
 import Model.ClienteModel;
 import java.util.ArrayList;
 /**
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  */
 public class ClienteController {
     
-    static ClienteDAOArq dao = new ClienteDAOArq();
+    static Cliente_dao dao = ClienteFactory.create();
     static ArrayList<ClienteModel> clientes;
     
     public static void cadastrarCliente (ClienteModel cliente){
@@ -27,6 +28,7 @@ public class ClienteController {
             aux = clientes.get(i);
             if(aux.getNome().equals(cliente.getNome())){
                 clientes.set(i, cliente);
+                dao.salvar(cliente);
                 return;
             }
             i++;
@@ -41,6 +43,7 @@ public class ClienteController {
            aux = clientes.get(i);
            if(aux.getNome() == nome){
                clientes.remove(i);
+               dao.alterar(clientes);
            }
         }
     }

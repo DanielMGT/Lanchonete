@@ -16,14 +16,15 @@ import java.util.ArrayList;
 public class ClienteDAOMem implements Cliente_dao{
     
     ArrayList<ClienteModel> clienteList = new ArrayList<ClienteModel>();   
-    private static ClienteDAOMem instance;
+    private static ClienteDAOMem dao;
+    
     private ClienteDAOMem(){}
     
     public static ClienteDAOMem getInstance(){
-        if(instance ==null){
-            instance = new ClienteDAOMem();
+        if(dao ==null){
+            dao = new ClienteDAOMem();
         }
-        return instance;
+        return dao;
     }
    
     @Override

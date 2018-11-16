@@ -19,7 +19,7 @@ import static manager.manipConfig.getProp;
  * @author danie
  */
 public class ClienteFactory {
-     public static Cliente_dao create() throws IOException {
+     public static Cliente_dao create() /*throws IOException*/ {
         String tipo;   
         Properties prop = null;
             try {

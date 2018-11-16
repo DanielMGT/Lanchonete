@@ -5,7 +5,6 @@
  */
 package DAO;
 
-import Factory.ClienteFactory;
 import Model.ClienteModel;
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,18 +23,19 @@ import java.util.logging.Logger;
  */
 public class ClienteDAOArq implements Cliente_dao {
     ArrayList <ClienteModel> list = new ArrayList();
-    private static ClienteDAOArq instance;
+    private static ClienteDAOArq dao;
+    
     public ClienteDAOArq(){}
     public static ClienteDAOArq getInstance(){
-        if (instance == null){
-            instance = new ClienteDAOArq();
+        if (dao == null){
+            dao = new ClienteDAOArq();
         }
-        return instance;
+        return dao;
     }
+    
     @Override
     public void salvar (ClienteModel cliente){
-        Cliente_dao dao = ClienteFactory.create();       
-        list = dao.recuperar();//recupera a lista do arquivo
+        list = this.recuperar();//recupera a lista do arquivo
         list.add(cliente);
         try{
             FileOutputStream saveFile = new FileOutputStream("CadastroCliente.txt");

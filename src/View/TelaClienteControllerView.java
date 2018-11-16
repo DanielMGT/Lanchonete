@@ -49,4 +49,8 @@ public class TelaClienteControllerView implements Initializable {
         Lanchonete.trocaTela("telaRemocaoCliente");
     }
     
+    public void chamaMenu(){
+        Lanchonete.trocaTela("menuPrincipal");
+    }
+    
 }

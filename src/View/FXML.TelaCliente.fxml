@@ -19,5 +19,6 @@
       <Button fx:id="btCadCliente" layoutX="254.0" layoutY="121.0" mnemonicParsing="false" onAction="#chamaCadastroCliente" text="Cadastrar cliente" />
       <Button fx:id="btAltCliente" layoutX="262.0" layoutY="188.0" mnemonicParsing="false" onAction="#chamaAlteraCliente" text="Alterar cliente" />
       <Button fx:id="btRemCliente" layoutX="256.0" layoutY="254.0" mnemonicParsing="false" onAction="#chamaRemoveCliente" text="Remover cliente" />
+      <Button fx:id="btVoltar" layoutX="281.0" layoutY="303.0" mnemonicParsing="false" onAction="#chamaMenu" text="Voltar" />
    </children>
 </AnchorPane>
