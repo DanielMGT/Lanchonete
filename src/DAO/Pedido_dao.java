@@ -5,10 +5,12 @@
  */
 package DAO;
 
+import Model.Pedido;
 /**
  *
  * @author danie
  */
-interface Pedido_dao {
+    public interface Pedido_dao {
+        void salvar(Pedido pedido);
     
-}
+    }

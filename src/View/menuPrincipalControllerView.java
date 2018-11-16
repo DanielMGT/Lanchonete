@@ -16,17 +16,13 @@ import javafx.scene.control.Label;
  * @author danie
  */
 public class menuPrincipalControllerView implements Initializable {
-    
-    
+      
     @FXML
     private Label lbmenuPrincipal;
-
     @FXML
     private Button btPedido;
-
     @FXML
     private Button btCliente;
-
     @FXML
     private Button btProduto;
     

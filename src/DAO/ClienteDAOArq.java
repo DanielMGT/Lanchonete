@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import Factory.ClienteFactory;
 import Model.ClienteModel;
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,7 +34,7 @@ public class ClienteDAOArq implements Cliente_dao {
     }
     @Override
     public void salvar (ClienteModel cliente){
-       ClienteDAOArq dao = new ClienteDAOArq();       
+        Cliente_dao dao = ClienteFactory.create();       
         list = dao.recuperar();//recupera a lista do arquivo
         list.add(cliente);
         try{

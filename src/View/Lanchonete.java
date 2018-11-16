@@ -118,15 +118,12 @@ public class Lanchonete extends Application implements Initializable {
     }
     
     public static void main(String[] args) {
-        launch(args);
-        
+        launch(args);  
     }
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
+    } 
     
 }
